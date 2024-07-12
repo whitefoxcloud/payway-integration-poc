@@ -1,9 +1,7 @@
 from logging import getLogger
-from typing import Tuple
 
 from .base import CUSTOMER_ENDPOINT_PATH
 from .client import BaseClient
-from ..errors import PaymentError
 from ..models import PayWayCustomer
 
 logger = getLogger(__name__)
