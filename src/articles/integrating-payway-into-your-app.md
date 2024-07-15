@@ -1,4 +1,4 @@
-# Integrating Payment Gateway into Your Website/App: A Comprehensive Guide with 
+# Integrating Payment Gateway into Your Website/App: A Comprehensive Guide using PayWay 
 
 Integrating a payment gateway into your website or app is a critical step 
 for any business looking to accept online payments securely and efficiently. 
