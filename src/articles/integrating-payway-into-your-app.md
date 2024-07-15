@@ -143,9 +143,9 @@ print(response)
 
 You could refer to the simple SDK that we implemented in [our GitHub repo](https://github.com/whitefoxcloud/payway-poc).
 
-That includes the skeleton for communicating with PayWay API. 
+That includes the skeleton of the SDK for communicating with PayWay API. 
 
-If you want to modify them to your business needs or get help with PayWay integration into your system, we could help you. Feel free to contact us.
+If you want to modify and adapt it to your specific business needs or get help with integrating PayWay into your system, we could help you. Feel free to contact us.
 
 
 # Comparing PayWay with Monoova, Stripe, and Other Australian Payment Gateways
@@ -188,8 +188,7 @@ you can offer your customers a secure, convenient payment experience,
 leading to increased sales and customer satisfaction.
 
 Navigating the technical complexities of payment gateway integration can be daunting. 
-Whitefox, as your trusted IT consulting partner, can guide you through the process, 
-from selecting the optimal gateway to ensuring a seamless integration.
+Whitefox  can guide you through the process, from selecting the optimal gateway to ensuring a seamless integration with proper testing.
 
 If you need assistance with integration or have any questions, feel free to 
-reach out to Whitefox, your trusted IT consulting partner.
+reach out to Whitefox.
