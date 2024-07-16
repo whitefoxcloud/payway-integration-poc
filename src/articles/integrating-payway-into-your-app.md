@@ -139,6 +139,23 @@ response = process_direct_debit_payment(1000, 'John Doe', '123456', '987654321')
 print(response)
 ```
 
+### Proposed payment flow integration with an existing backend & frontend
+
+He's our proposed payment flow if you want to integrate PayWay into your current system with an existing frontend & backend:
+
+```mermaid
+graph TD
+    A[User] -->|Initiates Payment| B[Frontend]
+    B -->|Send Payment Info| C[Backend REST API]
+    C -->|Validate & Process Payment| D[PayWay API]
+    D -->|Process Payment| E[Bank]
+    E -->|Payment Confirmation| D
+    D -->|Payment Status| C
+    C -->|Update Order Status| F[Database]
+    C -->|Respond with Status| B
+    B -->|Show Confirmation| A
+```
+
 ### Example PayWay SDK
 
 You could refer to the simple SDK that we implemented in [our GitHub repo](https://github.com/whitefoxcloud/payway-poc).
