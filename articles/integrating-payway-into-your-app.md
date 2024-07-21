@@ -40,13 +40,14 @@ together to process payments securely. Below is a proposed system architecture f
 
 ```mermaid
 graph TD
-    A[User] -->|Initiates Payment| B[Website/App]
-    B -->|Send Payment Info| C[Backend Server]
-    C -->|Request Payment| D[PayWay API]
+    A[User] -->|Initiates Payment| B[Frontend]
+    B -->|Send Payment Info| C[Backend REST API]
+    C -->|Validate & Process Payment| D[PayWay API]
     D -->|Process Payment| E[Bank]
     E -->|Payment Confirmation| D
     D -->|Payment Status| C
-    C -->|Update Order Status| B
+    C -->|Update Order Status| F[Database]
+    C -->|Respond with Status| B
     B -->|Show Confirmation| A
 ```
 
@@ -69,6 +70,8 @@ we made a proof of concept (POC) code available on [our GitHub repo](https://git
 This POC provides examples for processing credit card and direct debit payments using PayWay.
 
 ### Credit Card Payment Example
+
+![Credit card diagram](credit_card_diagram.png)
 
 Here is a simplified version of how to process a credit card payment using PayWay:
 
@@ -122,6 +125,8 @@ print(response)
 ```
 
 ### Direct Debit Payment Example
+
+![Direct debit diagram](direct_debit_diagram.png)
 
 Similarly, here is an example for processing a direct debit payment:
 
@@ -187,23 +192,6 @@ def process_direct_debit_payment(amount, frequency, bsb, account_number, account
 # Example usage
 response = process_direct_debit_payment(1000, "weekly", "012003", "456789", "John Doe", "your_customer_number")
 print(response)
-```
-
-### Proposed payment flow integration with an existing backend & frontend
-
-He's our proposed payment flow if you want to integrate PayWay into your current system with an existing frontend & backend:
-
-```mermaid
-graph TD
-    A[User] -->|Initiates Payment| B[Frontend]
-    B -->|Send Payment Info| C[Backend REST API]
-    C -->|Validate & Process Payment| D[PayWay API]
-    D -->|Process Payment| E[Bank]
-    E -->|Payment Confirmation| D
-    D -->|Payment Status| C
-    C -->|Update Order Status| F[Database]
-    C -->|Respond with Status| B
-    B -->|Show Confirmation| A
 ```
 
 ### Example PayWay SDK
