@@ -197,6 +197,28 @@ response = process_direct_debit_payment(1000, "weekly", "012003", "456789", "Joh
 print(response)
 ```
 
+### Settlement & Reconciliation
+
+Settlement involves transferring funds from the customer’s bank account to the merchant’s account, 
+typically through batch processing, clearing, and funding stages. Reconciliation ensures all 
+transactions are accurately recorded, matching payment gateway records with bank statements to 
+identify discrepancies such as failed transactions, chargebacks, or duplicate payments. 
+
+For direct debit and credit card payments, common errors include insufficient funds, 
+invalid details, or authorization failures. Handling these errors involves notifying 
+customers promptly, retrying transactions if supported, and maintaining detailed records to resolve disputes effectively.
+
+#### Handling errors
+For direct debit, handle issues like insufficient funds by notifying customers and retrying payments. 
+
+For credit card payments, ensure real-time validation and provide clear error messages 
+for failures due to invalid or expired cards. Implement robust error handling and automated 
+reconciliation tools to streamline the process, reducing manual errors and enhancing customer satisfaction. 
+
+Regular monitoring and communication with customers about transaction statuses are crucial for 
+maintaining trust and ensuring smooth payment processing.
+
+
 ## Example PayWay SDK
 
 The codes we introduced above were the simplified version of how you could communicate with PayWay using Python's `requests` library. While this approach works, it requires manual handling of HTTP requests and responses, which can be error-prone and time-consuming.
