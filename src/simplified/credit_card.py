@@ -2,8 +2,8 @@ import requests
 
 PAYWAY_API_URL = "https://api.payway.com.au/rest/v1/transactions"
 PAYWAY_SINGLE_USE_TOKEN_API_URL = "https://api.payway.com.au/rest/v1/single-use-tokens"
-PAYWAY_PUBLISHABLE_API_KEY = ""
-PAYWAY_SECRET_API_KEY = ""
+PAYWAY_PUBLISHABLE_API_KEY = ""  <-- This should be your publishable key
+PAYWAY_SECRET_API_KEY = ""  <-- This should be your secret key
 
 
 def process_credit_card_payment(amount, card_number, card_holder_name, expiry_month, expiry_year, cvn, merchant_id="TEST"):
@@ -18,10 +18,14 @@ def process_credit_card_payment(amount, card_number, card_holder_name, expiry_mo
         "expiryDateMonth": expiry_month,
         "expiryDateYear": expiry_year,
     }
-    tokenizing_response = requests.post(PAYWAY_SINGLE_USE_TOKEN_API_URL, data=card_info_data, headers={
-        "Authorization": f"Basic {PAYWAY_PUBLISHABLE_API_KEY}",
-        "Content-Type": "application/x-www-form-urlencoded",
-    })
+    tokenizing_response = requests.post(
+        PAYWAY_SINGLE_USE_TOKEN_API_URL,
+        data=card_info_data,
+        headers={
+            "Content-Type": "application/x-www-form-urlencoded",
+        },
+        auth=(PAYWAY_PUBLISHABLE_API_KEY, "")
+    )
     token = tokenizing_response.json()["singleUseTokenId"]
 
     # Process payment
@@ -34,10 +38,18 @@ def process_credit_card_payment(amount, card_number, card_holder_name, expiry_mo
         "merchantId": merchant_id,
     }
 
-    response = requests.post(PAYWAY_API_URL, data=payment_data, headers={
-        "Authorization": f"Basic {PAYWAY_SECRET_API_KEY}",
-        "Content-Type": "application/x-www-form-urlencoded",
-    })
+    response = requests.post(
+        PAYWAY_API_URL,
+        data=payment_data,
+        headers={
+            "Content-Type": "application/x-www-form-urlencoded",
+        },
+        auth=(PAYWAY_SECRET_API_KEY, "")
+    )
+
+    if response.status_code != 200:
+        raise Exception("the payment was not successful")
+
     return response.json()
 
 
