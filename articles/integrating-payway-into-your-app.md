@@ -370,12 +370,10 @@ While PayWay is a popular choice, it's important to consider alternatives like M
 Monoova is known for its focus on real-time payments and innovative features like PayTo.
 
 ### Security
-- PayWay: Offers advanced encryption and is backed by Westpac's robust security infrastructure.
-- Monoova: Also provides strong security measures, focusing on real-time payment processing.
+Monoova does comply with the PCI DSS Compliant, providing strong security measures.
 
 ### Payment Methods
-- PayWay: Supports credit card and direct debit payments.
-- Monoova: Specializes in real-time payments, including PayTo, PayID and NPP (New Payments Platform) payments.
+Monoova supports more payment methods than PayWay. It specializes in real-time payments, including PayTo, PayID and NPP (New Payments Platform) payments.
 
 ### Virtual Accounts & PayID
 
@@ -392,12 +390,10 @@ It offers automated reconciliation with PayID, which simplifies the process of m
 
 
 ### Integration
-PayWay: Offers comprehensive documentation and various integration options, making it suitable for a wide range of businesses.
-Monoova: Provides APIs that are designed for seamless integration with modern financial systems.
+Monoova offers comprehensive documentation and various integration options, making it suitable for a wide range of businesses. It also provides APIs that are designed for seamless integration with modern financial systems.
 
 ### Pricing
-PayWay: Pricing is based on transaction volume and payment methods used.
-Monoova: Offers competitive pricing with a focus on high-volume, real-time transactions.
+It offers competitive pricing with a focus on high-volume, real-time transactions.
 
 
 # Whitefox Expertise: Your Partner in Payment Gateway Integration
