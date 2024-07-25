@@ -1,4 +1,4 @@
-# Integrating Payment Gateway into Your Website/App: A Comprehensive Guide using PayWay 
+# Integrating PayWay Payment Gateway into Your Website or Application
 
 Integrating a payment gateway into your website or app is a critical step 
 for any business looking to accept online payments securely and efficiently. 
@@ -356,26 +356,40 @@ We can help you tailor the SDK to your specific requirements and ensure a seamle
 
 # Comparing PayWay with Monoova, Stripe, and Other Australian Payment Gateways
 
-| Feature            | PayWay            | Monoova           | Stripe            | eWAY       | Braintree |
-|--------------------|--------------------|--------------------|--------------------|------------|-----------|
-| Security           | PCI DSS Compliant | PCI DSS Compliant | PCI DSS Compliant | PCI DSS Compliant | PCI DSS Compliant |
-| Payment Methods    | Credit cards, BPAY, Direct Debit | Credit cards, PayTo, Direct Debit | Credit cards, digital wallets, etc. | Credit cards, PayPal, etc. | Credit cards, PayPal, etc. |
-| Integration        | API, Hosted Page, etc. | API, SDK         | API, SDK, Pre-built UI | API, SDK    | API, SDK   |
-| Customer Support  | Australian-based | Australian-based | Global, 24/7       | Australian-based | Global     |
-| Additional Features| Limited            | Real-time payments, PayTo | Recurring billing, marketplace, etc. | Fraud prevention, etc. | Fraud prevention, etc. |
-
+| Feature                               | [PayWay](https://www.payway.com.au)                   | [Monoova](https://www.monoova.com)                                                | [Stripe](https://stripe.com/en-au)                   | [Zepto](https://www.zepto.com.au)                      | [Azupay](https://azupay.com)                              | [eWAY](https://www.eway.com.au)                      | [Braintree](https://www.braintreepayments.com/en-au) |
+|---------------------------------------|----------------------------------|----------------------------------------------------------------|--------------------------------------|--------------------------|-------------------------|-------------------------|------------------------|
+| Security                              | PCI DSS Compliant                | PCI DSS Compliant                                              | PCI DSS Compliant                    | PCI DSS Compliant        | PCI DSS Compliant       | PCI DSS Compliant       | PCI DSS Compliant      |
+| Payment Methods                       | Credit cards, BPAY, Direct Debit | Credit cards, PayTo, Direct Debit, PayID, NPP                  | Credit cards, digital wallets, etc.  | PayID, NPP, Direct Debit | PayID, NPP               | Credit cards, PayPal | Credit cards, PayPal |
+| Generating virtual accounts on-demand | Yes                              | Yes                                                            | No                                   | Yes                      | No                      | No                         | No                        |
+| Integration                           | API, Hosted Page, etc.           | API, SDK                                                       | API, SDK, Pre-built UI               | API, SDK                 | API, SDK                | API, SDK                | API, SDK               |
+| Customer Support                      | Australian-based                 | Australian-based                                               | Global, 24/7                         | Australian-based         | Australian-based        | Australian-based        | Global                 |
+| Additional Features                   | Limited                          | Real-time payments, PayTo, automated reconciliation with PayID | Recurring billing, marketplace, etc. | Automated reconciliation | PayTo, Auto-matching transactions |                         |                        |
 
 ## Alternative solution: Monoova
 While PayWay is a popular choice, it's important to consider alternatives like Monoova. 
 Monoova is known for its focus on real-time payments and innovative features like PayTo.
 
 ### Security
-PayWay: Offers advanced encryption and is backed by Westpac's robust security infrastructure.
-Monoova: Also provides strong security measures, focusing on real-time payment processing.
+- PayWay: Offers advanced encryption and is backed by Westpac's robust security infrastructure.
+- Monoova: Also provides strong security measures, focusing on real-time payment processing.
 
 ### Payment Methods
-PayWay: Supports credit card and direct debit payments.
-Monoova: Specializes in real-time payments, including PayTo and NPP (New Payments Platform) payments.
+- PayWay: Supports credit card and direct debit payments.
+- Monoova: Specializes in real-time payments, including PayTo, PayID and NPP (New Payments Platform) payments.
+
+### Virtual Accounts & PayID
+
+#### Generating virtual accounts on-demand
+Monoova allows generating virtual BSB and account numbers on-demand, providing flexibility for businesses to manage their payments.
+
+#### PayID
+PayID is a unique identifier that can be linked to a bank account, a feature that enables customers to make payments with easy-to-remember information. Instead of providing a BSB and account number, users can provide a simple identifier such as a phone number, email address, or ABN. This makes the payment process more convenient and secure.
+
+With Monoova, you can generate/assign PayIDs and unique account numbers to every single one of your customers.
+
+### Automated reconciliation
+It offers automated reconciliation with PayID, which simplifies the process of matching incoming payments to invoices or customer accounts. This feature reduces the manual effort required for reconciliation, enhances accuracy, and helps in maintaining up-to-date financial records.
+
 
 ### Integration
 PayWay: Offers comprehensive documentation and various integration options, making it suitable for a wide range of businesses.
