@@ -169,3 +169,7 @@ print("Transaction status:", transaction.status)
 The code introduced in this repo is for demonstration purposes only, and not an official code or SDK from PayWay, hence you should adapt it to your specific requirements and security standards.
 
 We will not be responsible for any misuse or damage caused. Use it at your own risk.
+
+## License
+
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
