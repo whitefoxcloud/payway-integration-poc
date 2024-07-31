@@ -14,7 +14,7 @@ Here's an example of how you can use our example PayWay SDK to process a credit 
 
 Please note that this is for demonstration purposes only, and not an official SDK from PayWay, hence you should adapt it to your specific requirements and security standards.
 
-Create a PayWay client instance:
+#### Create a PayWay client instance:
 ```python
 payway_client = PayWayClient(
     api_base_url="https://api.payway.com.au/rest/v1",
@@ -25,7 +25,7 @@ payway_client = PayWayClient(
 )
 ```
 
-Obtain a single use token for a credit card:
+#### Obtain a single use token for a credit card:
 ```python
 # Create a card instance
 card = PayWayCard(
@@ -48,7 +48,7 @@ token = token_response.token
 print("Created card token:", token)
 ```
 
-Create a customer and store the card token:
+#### Create a customer and store the card token:
 ```python
 # Create a customer instance
 customer = PayWayCustomer(
@@ -76,7 +76,7 @@ if errors:
 print("Created customer:", payway_customer.customer_number)
 ```
 
-Process a transaction:
+#### Process a transaction:
 ```python
 # Create a transaction instance
 payment = PayWayPayment(
