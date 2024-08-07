@@ -1,4 +1,4 @@
-# PayWay POC
+# PayWay Integration POC
 
 This repository contains proof of concept (POC) code for the article [*Integrating PayWay Payment Gateway into Your Website or Application*](https://www.whitefox.cloud/articles/integrating-payway-payment-gateway-into-your-website-or-application/) on [Whitefox Cloud](https://www.whitefox.cloud/). 
 
