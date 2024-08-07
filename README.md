@@ -1,11 +1,15 @@
 # PayWay POC
 
-This repository contains proof of concept (POC) code for integrating PayWay for credit card payments and direct debit payments. PayWay is a secure and reliable online payment solution provided by Westpac.
+This repository contains proof of concept (POC) code for the article [*Integrating PayWay Payment Gateway into Your Website or Application*](https://www.whitefox.cloud/articles/integrating-payway-payment-gateway-into-your-website-or-application/) on [Whitefox Cloud](https://www.whitefox.cloud/). 
+
+You could also find a [copy of the post](./article/README.md) in the [article](./article) folder.
 
 ## Scenarios
 
-- Credit Card Payments: Process credit card transactions securely using PayWay.
-- Direct Debit Payments: Set up and manage direct debit payments with ease.
+PayWay is a secure and reliable online payment solution provided by Westpac. In this POC, we demonstrate how to integrate PayWay into your website or application using Python. We cover the following scenarios:
+
+- Credit Card Payment: Process credit card transactions securely using PayWay.
+- Direct Debit Payment: Set up direct debit payments with ease.
 
 ## Getting Started
 
@@ -53,11 +57,11 @@ Before you begin, ensure you have met the following requirements:
 
 ## Running the simplified scenarios
 
-Run the application using the following command:
+Run the scenarios using the following command:
 
 ```
-python src/app/credit_card_poc.py  # for credit card payments
-python src/app/direct_debit_poc.py  # for direct debit payments
+python src/simplified/credit_card.py  # for credit card payments
+python src/simplified/direct_debit.py  # for direct debit payments
 ```
 
 ## Example PayWay SDK
@@ -162,6 +166,15 @@ if errors:
 # Log transaction information
 print("Processed transaction:", transaction.transaction_id)
 print("Transaction status:", transaction.status)
+```
+
+### Running the scenarios using the SDK
+
+Run the scenarios using the following command:
+
+```
+python src/app/credit_card.py  # for credit card payments
+python src/app/direct_debit.py  # for direct debit payments
 ```
 
 ## Disclaimer
